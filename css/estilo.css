@@ -101,8 +101,335 @@ a {
     position: absolute;
     inset: 0;
     z-index: -3;
-    background: url(../imagens/Cidade2_Aracaju.jpg);
+    background: url();
     background-size: cover;
     background-position: center;
     transform: scale(1.015);
+}
+
+.hero-conteudo {
+    padding: 110px 7.2% 100px;
+    max-width: 760px;
+}
+
+.sobrelinha,
+.etiqueta {
+    color: var(--verde);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.hero .sobrelinha {
+    color: #d3f0e7;
+    margin-bottom: 28px;
+    font-size: 11px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(46px, 6vw, 80px);
+    line-height: .98;
+    font-weight: 800;
+    letter-spacing: -.045em;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #f2e7dc;
+}
+
+.descricao-hero {
+    max-width: 370px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #ffffffd4;
+}
+
+.botao-contorno {
+    display: inline-flex;
+    gap: 24px;
+    align-items: center;
+    padding: 11px 20px;
+    margin-top: 27px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .1em;
+    transition: background .2s, color .2s;
+}
+
+.botao-contorno:hover {
+    background: var(--branco);
+    color: var(--verde);
+}
+
+.hero-miniaturas {
+    position: absolute;
+    right: 5.5%;
+    bottom: 24px;
+    display: flex;
+    gap: 5px;
+}
+
+.miniatura {
+    width: 82px;
+    height: 56px;
+    border: 1px solid #ffffffa6;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
+}
+
+.miniatura:hover {
+    transform: translateY(-4px);
+}
+
+.miniatura-um {
+    background-image: url();
+}
+
+.miniatura-dois { 
+    background-image: url(); 
+}
+
+.miniatura-tres { 
+    background-image: url(); 
+}
+
+/* ==== Seção 1: Introdução e destinos ==== */
+.introducao {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 82px max(32px, calc((100% - var(--largura)) / 2)) 92px;
+    margin-bottom: 100px;
+}
+
+.intro-titulo {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.intro-titulo .etiqueta {
+    color: #70c7bb;
+    margin-bottom: 15px;
+}
+
+.intro-titulo h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    letter-spacing: -.035em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.intro-titulo > p{
+    line-height: 23px;
+}
+
+.intro-titulo > p:last-child {
+    color: #b8c2bf;
+    font-size: 13px;
+}
+
+.cards-tours {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card-tour {
+    min-height: 360px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 9px;
+    border: 1px solid #303737;
+    background: #101616;
+    transition: transform .25s ease, border-color .25s;
+}
+
+.card-tour:hover {
+    transform: translateY(-6px);
+    border-color: #70c7bb;
+}
+
+.card-foto {
+    position: absolute;
+    inset: 0 0 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .5s ease;
+}
+
+.card-tour:hover .card-foto {
+    transform: scale(1.04);
+}
+
+.card-tour::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.65) 38%, transparent 78%);
+}
+
+.tour-SaoCristovao .card-foto {
+    background-image: url();
+}
+
+.tour-Laranjeiras .card-foto {
+    background-image: url();
+}
+
+.tour-Aracaju .card-foto {
+    background-image: url();
+}
+
+.tour-Caninde .card-foto {
+    background-image: url();
+}
+
+.card-texto {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 18px;
+}
+
+.card-numero {
+    color: #8ed6ca;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+.card-texto h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    margin: 7px 0;
+}
+
+.card-texto p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #c6cfcd;
+    margin-bottom: 14px;
+}
+
+.card-texto a {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-top: 10px;
+}
+
+/* ==== Seção 2: Patrimônio histórico e cidades culturais ==== */
+.secao-clara {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: 0 auto 110px;
+}
+
+.cabecalho-secao {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 34px;
+}
+
+.cabecalho-secao h2,
+.gastronomia h2,
+.roteiros h2,
+.contato h2,
+.cultura h2 {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.04em;
+}
+
+.cabecalho-secao h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.08;
+}
+
+.texto-apoio {
+    max-width: 330px;
+    color: #657477;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.grade-experiencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.experiencia {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 8px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.experiencia:hover {
+    transform: translateY(-5px);
+}
+
+.experiencia::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #000000db, transparent 70%);
+}
+
+/* Imagens */
+.experiencia-SaoCristovao{
+    background-image: url(../Modelo4/Imagens/Mercado_Municipal_Antônio_Franco.jpg);
+}
+
+.experiencia-onsen {
+    background-image: url(../Modelo4/Imagens/Museu_de_Arqueologia_Caninde_de_Francisco.jpg);
+}
+
+.experiencia-rua {
+    background-image: url(../Modelo4/Imagens/Praça_São_Francisco.jpg);
+}
+
+/* Legendas */
+.experiencia-legenda {
+    position: absolute;
+    z-index: 1;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+}
+
+.experiencia-legenda span,
+.dia-roteiro small {
+    color: var(--menta);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.experiencia-legenda h3 {
+    margin: 8px 0;
+    font: 700 23px 'Manrope', sans-serif;
+}
+
+.experiencia-legenda p {
+    color: #e0e6e3;
+    font-size: 14px;
+    line-height: 1.5;
 }
