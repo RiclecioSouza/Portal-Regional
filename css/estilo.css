@@ -433,3 +433,283 @@ a {
     font-size: 14px;
     line-height: 1.5;
 }
+
+/* ==== Cultura */
+.cultura{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 520px;
+    overflow: hidden;
+    margin-bottom: 110px;
+    color: var(--branco);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 24, 27, 0.88),
+            rgba(3, 24, 27, 0.35)
+        ),
+        url()
+        center / cover;
+}
+
+.cultura-conteudo {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.cultura .etiqueta {
+    margin-top: 24px;
+    margin-bottom: 18px;
+    color: #70c7bb;
+}
+
+.cultura h2 {
+    margin-bottom: 20px;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+}
+
+.cultura-conteudo > p:not(.etiqueta) {
+    max-width: 430px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.cultura-assinatura {
+    position: absolute;
+    right: 32px;
+    bottom: 28px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+}
+
+/* ========= GASTRONOMIA ========== */
+.gastronomia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 440px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #dce9df;
+}
+
+.gastronomia-foto {
+    min-height: 440px;
+    background: url()
+        center / cover;
+}
+
+.gastronomia-texto {
+    align-self: center;
+    padding: clamp(32px, 6vw, 76px);
+}
+
+.gastronomia h2 {
+    margin: 14px 0 18px;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.08;
+}
+
+.gastronomia-texto > p:not(.etiqueta) {
+    max-width: 390px;
+    color: #5d7170;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Lista de sabores */
+.sabores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+.sabores span {
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: #fff;
+    font-size: 13px;
+}
+
+/* ===== LINKS ====== */
+.link-seta {
+    display: inline-flex;
+    gap: 18px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--verde);
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ====  ==== */
+.roteiros {
+    margin-bottom: 110px;
+    padding: 82px max(32px, calc((100% - var(--largura)) / 2)) 90px;
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.roteiros-cabecalho {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 34px;
+}
+
+.roteiros h2 {
+    font-size: clamp(30px, 4vw, 43px);
+}
+
+.roteiros-cabecalho > p {
+    max-width: 300px;
+    color: #aebbb7;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.linha-roteiro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #35413e;
+}
+
+.dia-roteiro {
+    display: flex;
+    gap: 17px;
+    padding: 28px 18px 0 0;
+}
+
+.dia-numero {
+    color: #70c7bb;
+    font: 800 38px 'Manrope', sans-serif;
+}
+
+.dia-roteiro h3 {
+    margin: 8px 0;
+    font: 700 18px 'Manrope', sans-serif;
+}
+
+.dia-roteiro p {
+    max-width: 190px;
+    color: #aebbb7;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ==== Contato ====*/
+.contato {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    width: min(var(--largura), calc(100% - 64px));
+    min-height: 380px;
+    overflow: hidden;
+    margin: 0 auto 100px;
+    border-radius: 10px;
+    background: var(--menta);
+}
+
+.contato-imagem {
+    background: url()
+        center / cover;
+}
+
+.contato-conteudo > p:not(.etiqueta) {
+    max-width: 390px;
+    color: #5d7170;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contato-conteudo {
+    align-self: center;
+    padding: clamp(32px, 6vw, 76px);
+}
+
+.botao-preenchido {
+    display: inline-flex;
+    gap: 25px;
+    margin-top: 25px;
+    padding: 13px 19px;
+    border-radius: 30px;
+    background: var(--verde);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-preenchido:hover {
+    transform: translateY(-2px);
+    background: #034f50;
+}
+
+/* ==== Rodapé ==== */
+.rodape {
+    width: min(var(--largura), calc(100% - 64px));
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid rgba(18, 45, 50, .18);
+}
+
+.rodape-marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.rodape-marca .marca-simbolo {
+    flex: 0 0 32px;
+}
+
+.rodape-informacoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.rodape-informacoes p,
+.rodape-informacoes a {
+    color: #657477;
+    font-size: 11px;
+}
+
+.rodape-informacoes a {
+    transition: color .2s ease;
+}
+
+.rodape-informacoes a:hover {
+    color: var(--verde);
+}
+
+.voltar-topo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(18, 45, 50, .25);
+    border-radius: 50%;
+    color: var(--verde) !important;
+    font-size: 17px !important;
+}
+
+.voltar-topo:hover {
+    background: var(--verde);
+    color: var(--branco) !important;
+}
