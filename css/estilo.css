@@ -351,6 +351,7 @@ a {
 .cultura h2 {
     font-family: 'Manrope', sans-serif;
     letter-spacing: -0.04em;
+    margin-bottom: 20px;
 }
 
 .cabecalho-secao h2 {
@@ -466,7 +467,6 @@ a {
 }
 
 .cultura h2 {
-    margin-bottom: 20px;
     font-size: clamp(38px, 5vw, 62px);
     line-height: 1.05;
 }
@@ -562,7 +562,12 @@ a {
     margin-bottom: 34px;
 }
 
-.roteiros h2 {
+.roteiros-cabecalho .etiqueta {
+    margin-bottom: 18px;
+    color: #70c7bb;
+}
+
+.roteiros-cabecalho h2 {
     font-size: clamp(30px, 4vw, 43px);
 }
 
@@ -617,6 +622,16 @@ a {
 .contato-imagem {
     background: url()
         center / cover;
+}
+
+.contato-conteudo .etiqueta {
+    margin-bottom: 18px;
+    color: #70c7bb;
+}
+
+.contato-conteudo h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.08;
 }
 
 .contato-conteudo > p:not(.etiqueta) {
