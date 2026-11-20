@@ -815,7 +815,7 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    border-top: 1px solid rgba(18, 45, 50, .18);
+    border-top: 1px solid #122d322e;
 }
 
 .rodape-marca {
