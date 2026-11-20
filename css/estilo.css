@@ -100,7 +100,7 @@ a {
     position: absolute;
     inset: 0;
     z-index: -3;
-    background: url();
+    background: url(../imagens/aracaju-city.png);
     background-size: cover;
     background-position: center;
     transform: scale(1.015);
@@ -235,15 +235,15 @@ a {
 }
 
 .miniatura-um {
-    background-image: url();
+    background-image: url(../imagens/Rio_Sao_Francisco_Caninde_do_Sao_Francisco.jpg);
 }
 
 .miniatura-dois { 
-    background-image: url(); 
+    background-image: url(../imagens/Oceanário_de_Aracaju.JPG); 
 }
 
 .miniatura-tres { 
-    background-image: url(); 
+    background-image: url(../imagens/Mercado_Municipal_Antônio_Franco.jpg); 
 }
 
 /* ==== SEÇÃO 1: INTRODUÇÃO E DESTINOS ==== */
@@ -334,19 +334,19 @@ a {
 }
 
 .tour-SaoCristovao .card-foto {
-    background-image: url();
+    background-image: url(../imagens/Igreja_do_Carmo_Sao_Cristovao.jpg);
 }
 
 .tour-Laranjeiras .card-foto {
-    background-image: url();
+    background-image: url(../imagens/Museu_Afro-Brasileiro_de_Laranjeira.jpg);
 }
 
 .tour-Aracaju .card-foto {
-    background-image: url();
+    background-image: url(../imagens/aracaju-capital.png);
 }
 
 .tour-Caninde .card-foto {
-    background-image: url();
+    background-image: url(../imagens/caninde-Barragem.png);
 }
 
 .card-texto {
@@ -455,15 +455,15 @@ a {
 
 /* ---- Imagens ---- */
 .experiencia-SaoCristovao{
-    background-image: url();
+    background-image: url(../imagens/Mercado_Municipal_Antônio_Franco.jpg);
 }
 
 .experiencia-laranjeiras {
-    background-image: url();
+    background-image: url(../imagens/Museu_de_Arqueologia_Caninde_de_Francisco.jpg);
 }
 
 .experiencia-aracaju {
-    background-image: url();
+    background-image: url(../imagens/Praça_São_Francisco.jpg);
 }
 
 /* ---- Legendas ---- */
@@ -519,8 +519,9 @@ a {
     color: var(--branco);
     background:
         linear-gradient(90deg, #03181be0, #03181b59),
-        url()
+        url(../imagens/gente-sergipana.jpg)
         center / cover;
+    background-attachment: fixed;
 }
 
 .cultura-conteudo {
@@ -558,6 +559,16 @@ a {
     margin-bottom: 20px;
 }
 
+.cultura p > a {
+    display: block;
+    text-decoration: underline;
+    color: #ada5a5;
+}
+
+.cultura p > a:hover {
+    color: var(--laranja);
+}
+
 .cultura-assinatura {
     position: absolute;
     right: 32px;
@@ -578,7 +589,7 @@ a {
 
 .gastronomia-foto {
     min-height: 440px;
-    background: url()
+    background: url(../imagens/moqueca_sergipana.jpg)
         center / cover;
 }
 
@@ -738,7 +749,7 @@ a {
 }
 
 .contato-imagem {
-    background: url()
+    background: url(../imagens/historia-sergipana-cacumbi.jpg)
         center / cover;
 }
 
@@ -861,6 +872,16 @@ a {
 }
 
 /* Ajustes de navegação e conteúdo em telas menores */
+@media (max-width: 960px) {
+    .linha-roteiro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dia-roteiro {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 900px) {
     .topo {
         width: calc(100% - 40px);
@@ -881,6 +902,36 @@ a {
 
     .rodape {
         width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 860px) {
+    .gastronomia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gastronomia-foto {
+        min-height: 480px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .contato {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contato-imagem {
+        min-height: 480px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 700px) {
+    .grade-experiencias {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -946,12 +997,31 @@ a {
         min-height: 340px;
     }
 
+    .cabecalho-secao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .experiencias > p {
         margin-top: 26px;
     }
 
     .cultura-conteudo > p:not(.etiqueta) {
         font-size: 12px;
+    }
+
+    .linha-roteiro {
+        grid-template-columns: 1fr;
+    }
+
+    .dia-roteiro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .roteiros-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .rodape {
