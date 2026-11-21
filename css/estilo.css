@@ -1017,6 +1017,10 @@ a {
         font-size: 12px;
     }
 
+    .cultura-assinatura {
+        left: 70%;
+    }
+
     .linha-roteiro {
         grid-template-columns: 1fr;
     }
